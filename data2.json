@@ -1,0 +1,371 @@
+{
+    "user": {
+        "id": "f6050e59-8f28-4359-a890-940d3b1b017c",
+        "email_id": "soumik@pingsafe.com",
+        "name": "Soumik Sur",
+        "blocked": false,
+        "registered": true,
+        "org_id": "d918a590-7508-44dc-abd4-36653c8f4431",
+        "role": "ORG_ADMIN",
+        "otp": null,
+        "otp_token": null,
+        "otp_type": null,
+        "otp_request_attempts": 0,
+        "otp_request_time": null,
+        "otp_validation_attempts": 0,
+        "otp_validation_time": "2022-09-26T05:54:13.000Z",
+        "createdAt": "2022-09-16T11:15:50.000Z",
+        "updatedAt": "2022-09-26T05:54:13.000Z",
+        "user_project_roles": [
+            {
+                "id": "a6f03896-e406-4fd9-bbbc-421882e34ce3",
+                "user_id": "f6050e59-8f28-4359-a890-940d3b1b017c",
+                "project_id": "e7ef7a3b-0060-4fde-9292-ba2da6c9fa56",
+                "role": "PROJECT_ADMIN",
+                "active": true,
+                "createdAt": "2022-09-16T11:15:50.000Z",
+                "updatedAt": "2022-09-16T11:15:50.000Z"
+            }
+        ]
+    },
+    "org": {
+        "id": "d918a590-7508-44dc-abd4-36653c8f4431",
+        "title": "PingSafe",
+        "active": true,
+        "domain": "pingsafe.com",
+        "trial": true,
+        "trial_plan_type": "ENTERPRISE",
+        "trial_end_time": "2022-10-16T11:15:50.000Z",
+        "feature_override": null,
+        "sso_org_id": null,
+        "sso_identity_provider": null,
+        "sso_connection_id": null,
+        "sso_allowed_domains": null,
+        "sso_directory_id": null,
+        "sso_connection_meta": null,
+        "sso_block_direct_access": false,
+        "createdAt": "2022-09-16T11:15:50.000Z",
+        "updatedAt": "2022-09-16T11:15:50.000Z"
+    },
+    "time": "2022-09-28T07:25:30.809Z",
+    "issueCount": 11,
+    "accounts": [
+        {
+            "id": "a096b2a0-52b2-4de7-a369-5500c041d7f4",
+            "provider": "AWS",
+            "org_id": "d918a590-7508-44dc-abd4-36653c8f4431",
+            "project_id": "e7ef7a3b-0060-4fde-9292-ba2da6c9fa56",
+            "title": "test",
+            "active": true,
+            "access_type": "READ_ONLY",
+            "aws_integration_type": "CROSS_ACCOUNT",
+            "aws_account_id": "514520117976",
+            "aws_organization_id": "639334036932",
+            "aws_china_region": false,
+            "aws_access_key_id": null,
+            "aws_cross_account_role_arn": "arn:aws:iam::514520117976:role/pingsafe-scanner-fsx5rg-PingSafeSecurityAuditRole-1I1FSIFQFE51D",
+            "aws_cross_account_new_flow": true,
+            "azure_application_id": null,
+            "azure_tenant_id": null,
+            "azure_subscription_id": null,
+            "google_auth_project_id": null,
+            "google_organization_id": null,
+            "google_project_id": null,
+            "google_client_email": null,
+            "digital_ocean_team_id": null,
+            "configuration_error": null,
+            "finished_first_scan": false,
+            "cloud_organisation_id": "28ef0a4f-dd43-4d40-a10e-4de0e4e397a3",
+            "createdAt": "2022-09-16T11:51:18.000Z",
+            "updatedAt": "2022-09-28T04:37:14.000Z"
+        },
+        {
+            "id": "a096b2a0-52b2-4de7-a369-5500c041d7f4",
+            "provider": "AWS",
+            "org_id": "d918a590-7508-44dc-abd4-36653c8f4431",
+            "project_id": "e7ef7a3b-0060-4fde-9292-ba2da6c9fa56",
+            "title": "test",
+            "active": true,
+            "access_type": "READ_ONLY",
+            "aws_integration_type": "CROSS_ACCOUNT",
+            "aws_account_id": "514520117976",
+            "aws_organization_id": "639334036932",
+            "aws_china_region": false,
+            "aws_access_key_id": null,
+            "aws_cross_account_role_arn": "arn:aws:iam::514520117976:role/pingsafe-scanner-fsx5rg-PingSafeSecurityAuditRole-1I1FSIFQFE51D",
+            "aws_cross_account_new_flow": true,
+            "azure_application_id": null,
+            "azure_tenant_id": null,
+            "azure_subscription_id": null,
+            "google_auth_project_id": null,
+            "google_organization_id": null,
+            "google_project_id": null,
+            "google_client_email": null,
+            "digital_ocean_team_id": null,
+            "configuration_error": null,
+            "finished_first_scan": false,
+            "cloud_organisation_id": "28ef0a4f-dd43-4d40-a10e-4de0e4e397a3",
+            "createdAt": "2022-09-16T11:51:18.000Z",
+            "updatedAt": "2022-09-28T04:37:14.000Z"
+        }
+    ],
+    "projects": [
+        {
+            "id": "c879c62a-11c0-11ed-b036-42010aa00017",
+            "title": "PingSafe Demo",
+            "default": true
+        }
+    ],
+    "compliance": {
+        "complianceId": "AWS_RBI_MD_ITF",
+        "title": "AWS RBI MD-ITF",
+        "description": "Reserve Bank of India Master Direction - Information Technology Framework",
+        "requirements": 24,
+        "mappedPlugins": 0,
+        "pass": 0,
+        "fail": 0,
+        "controls": {
+            "3": {
+                "id": "3",
+                "title": "Information Security",
+                "controls": {
+                    "3.1": {
+                        "id": "3.1",
+                        "title": "The IS Policy must provide for a IS framework with the following basic tenets:",
+                        "controls": {
+                            "a": {
+                                "id": "a",
+                                "title": "Identification and Classification of Information Assets",
+                                "description": "NBFCs shall maintain detailed inventory of Information Asset with distinct and clear identification of the asset.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "b": {
+                                "id": "b",
+                                "title": "Segregation of functions",
+                                "description": "There should be segregation of the duties of the Security Officer/Group (both physical security as well as cyber security) dealing exclusively with information systems security and the Information Technology division which actually implements the computer systems. The information security function should be adequately resourced in terms of the number of staff, level of skill and tools or techniques like risk assessment, security architecture, vulnerability assessment, forensic assessment, etc. Further, there should be a clear segregation of responsibilities relating to system administration, database administration and transaction processing",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "c": {
+                                "id": "c",
+                                "title": "Role based Access Control",
+                                "description": "Access to information should be based on well-defined user roles (system administrator, user manager, application owner etc.), NBFCs shall avoid dependence on one or few persons for a particular job. There should be clear delegation of authority for right to upgrade/change user profiles and permissions and also key business parameters (eg. interest rates) which should be documented.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "d": {
+                                "id": "d",
+                                "title": "Personnel Security",
+                                "description": "A few authorized application owners/users may have intimate knowledge of financial institution processes and they pose potential threat to systems and data. NBFC should have a process of appropriate check and balance in this regard. Personnel with privileged access like system administrator, cyber security personnel, etc should be subject to rigorous background check and screening.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "e": {
+                                "id": "e",
+                                "title": "Physical Security",
+                                "description": "The confidentiality, integrity, and availability of information can be impaired through physical access and damage or destruction to physical components. NBFCs need to create a secured environment for physical security of IS Assets such as secure location of critical data, restricted access to sensitive areas like data center etc.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "f": {
+                                "id": "f",
+                                "title": "Maker-checker",
+                                "description": "Maker-checker is one of the important principles of authorization in the information systems of financial entities. For each transaction, there must be at least two individuals necessary for its completion as this will reduce the risk of error and will ensure reliability of information.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "g": {
+                                "id": "g",
+                                "title": "Incident Management",
+                                "description": "The IS Policy should define what constitutes an incident. NBFCs shall develop and implement processes for preventing, detecting, analysing and responding to information security incidents.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "h": {
+                                "id": "h",
+                                "title": "Trails",
+                                "description": "NBFCs shall ensure that audit trails exist for IT assets satisfying its business requirements including regulatory and legal requirements, facilitating audit, serving as forensic evidence when required and assisting in dispute resolution. If an employee, for instance, attempts to access an unauthorized section, this improper activity should be recorded in the audit trail.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            "i": {
+                                "id": "i",
+                                "title": "Public Key Infrastructure (PKI)",
+                                "description": "NBFCs may increase the usage of PKI to ensure confidentiality of data, access control, data integrity, authentication and nonrepudiation.",
+                                "plugins": [],
+                                "pluginCount": 0,
+                                "pass": 0,
+                                "fail": 0
+                            }
+                        },
+                        "pass": 0,
+                        "fail": 0,
+                        "pluginCount": 0
+                    },
+                    "3.3": {
+                        "id": "3.3",
+                        "title": "Vulnerability Management",
+                        "description": "A vulnerability can be defined as an inherent configuration flaw in an organization’s information technology base, whether hardware or software, which can be exploited by a third party to gather sensitive information regarding the organization. Vulnerability management is an ongoing process to determine the process of eliminating or mitigating vulnerabilities based upon the risk and cost associated with the vulnerabilities. NBFCs may devise a strategy for managing and eliminating vulnerabilities and such strategy may clearly be communicated in the Cyber Security policy.",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "3.5": {
+                        "id": "3.5",
+                        "title": "Cyber Crisis Management Plan",
+                        "description": "A Cyber Crisis Management Plan (CCMP) should be immediately evolved and should be a part of the overall Board approved strategy. CCMP should address the following four aspects: (i) Detection (ii) Response (iii) Recovery and (iv) Containment. NBFCs need to take effective measures to prevent cyber-attacks and to promptly detect any cyber-intrusions so as to respond / recover / contain the fall out. NBFCs are expected to be well prepared to face emerging cyber-threats such as ‘zero-day’ attacks, remote access threats, and targeted attacks. Among other things, NBFCs should take necessary preventive and corrective measures in addressing various types of cyber threats including, but not limited to, denial of service, distributed denial of services (DDoS), ransom-ware / crypto ware, destructive malware, business email frauds including spam, email phishing, spear phishing, whaling, vishing frauds, drive-by downloads, browser gateway fraud, ghost administrator exploits, identity frauds, memory update frauds, password related frauds, etc.",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "3.9": {
+                        "id": "3.9",
+                        "title": "IT Risk Assessment",
+                        "description": "NBFCs should undertake a comprehensive risk assessment of their IT systems at least on a yearly basis. The assessment should make an analysis on the threats and vulnerabilities to the information technology assets of the NBFC and its existing security controls and processes. The outcome of the exercise should be to find out the risks present and to determine the appropriate level of controls necessary for appropriate mitigation of risks. The risk assessment should be brought to the notice of the Chief Risk Officer (CRO), CIO and the Board of the NBFC and should serve as an input for Information Security auditors.",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "3.12": {
+                        "id": "3.12",
+                        "title": "Training",
+                        "description": "Human link is the weakest link in the information security chain. Hence, there is a vital need for an initial and ongoing training and information security awareness programme. The programme may be periodically updated keeping in view changes in information technology system, threats/vulnerabilities and/or the information security framework. There needs to be a mechanism to track the effectiveness of training programmes through an assessment / testing process. At any point of time, NBFCs need to maintain an updated status on user training and awareness relating to information security.",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    }
+                },
+                "pass": 0,
+                "fail": 0,
+                "pluginCount": 0
+            },
+            "6": {
+                "id": "6",
+                "title": "Business Continuity Planning (BCP) and Disaster Recovery",
+                "controls": {
+                    "6.3": {
+                        "id": "6.3",
+                        "plugins": [],
+                        "title": "NBFCs shall consider the need to put in place necessary backup sites for their critical business systems and Data centers.",
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "6.4": {
+                        "id": "6.4",
+                        "plugins": [],
+                        "title": "NBFCs shall test the BCP either annually or when significant IT or business changes take place to determine if the entity could be recovered to an acceptable level of business within the timeframe stated in the contingency plan. The test should be based on ‘worst case scenarios’. The results along with the gap analysis may be placed before the CIO and the Board. The GAP Analysis along with Board’s insight should form the basis for construction of the updated BCP.",
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    }
+                },
+                "pass": 0,
+                "fail": 0,
+                "pluginCount": 0
+            },
+            "8": {
+                "id": "8",
+                "title": "It is recommended that smaller NBFCs may start with developing basic IT systems mainly for maintaining the database.",
+                "controls": {
+                    "i": {
+                        "id": "i",
+                        "title": "Basic security aspects such as physical/ logical access controls and well defined password policy;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "ii": {
+                        "id": "ii",
+                        "title": "A well-defined user role;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "iii": {
+                        "id": "iii",
+                        "title": "A Maker-checker concept to reduce the risk of error and misuse and to ensure reliability of data/information;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "iv": {
+                        "id": "iv",
+                        "title": "Information Security and Cyber Security;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "v": {
+                        "id": "v",
+                        "title": "Requirements as regards Mobile Financial Services, Social Media and Digital Signature Certificates as indicated in para 3.18, 3.10 & 3.11 above;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "vi": {
+                        "id": "vi",
+                        "title": "System generated reports for Top Management summarising financial position including operating and non-operating revenues and expenses, cost benefit analysis of segments/verticals, cost of funds, etc.;",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "vii": {
+                        "id": "vii",
+                        "title": "Adequacy to file regulatory returns to RBI (COSMOS Returns);",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "viii": {
+                        "id": "viii",
+                        "title": "A BCP policy duly approved by the Board ensuring regular oversight of the Board by way of periodic reports (at least once every year);",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "ix": {
+                        "id": "ix",
+                        "plugins": [],
+                        "title": "Arrangement for backup of data with periodic testing.",
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    }
+                },
+                "pass": 0,
+                "fail": 0,
+                "pluginCount": 0
+            }
+        }
+    }
+}
