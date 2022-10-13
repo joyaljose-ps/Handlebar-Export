@@ -6,11 +6,17 @@ const Handlebars = require("handlebars");
 
 const path = require("path");
 
-const data = require('./data.json');
+const data = require('./data2.json');
 
 const compile = async function (templateName, data) {
     const filePath = path.join(process.cwd(), 'templates', `${templateName}.hbs`);
     const html = await fs.readFile(filePath, 'utf8');
+
+    const partialsPath = path.join(process.cwd(), 'partials', 'controls.hbs');
+    const partialHtml = await fs.readFile(partialsPath, 'utf8');
+
+    const pluginsPartialPath = path.join(process.cwd(), 'partials', 'plugins.hbs');
+    const pluginsPartialHtml = await fs.readFile(pluginsPartialPath, 'utf8');
 
     Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
         return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
@@ -51,21 +57,6 @@ const compile = async function (templateName, data) {
         lvalue = parseFloat(lvalue);
         rvalue = parseFloat(rvalue);
         return lvalue + rvalue;
-    });
-
-    Handlebars.registerHelper("pluginCount", function (arg) {
-        var pluginCounter = function (controls) {
-            var pluginCount = 0;
-            Object.values(arg).map(item => {
-                if (!item.controls && item.pluginCount) {
-                    pluginCount += item.plugins.length
-                } else if (item.controls && !item.pluginCount) {
-                    pluginCount += pluginCounter(item.controls);
-                }
-            })
-            return pluginCount;
-        }
-        return pluginCounter(arg);
     });
 
     Handlebars.registerHelper("passedCheckText", function (arg) {
@@ -120,6 +111,10 @@ const compile = async function (templateName, data) {
         }
     });
 
+    Handlebars.registerPartial('recursiveControls', partialHtml);
+
+    Handlebars.registerPartial('recursivePlugins', pluginsPartialHtml)
+
     console.log(html)
     return Handlebars.compile(html)(data);
 };
@@ -145,6 +140,12 @@ const compile = async function (templateName, data) {
         await page.pdf({
             path: 'output.pdf',
             format: 'A4',
+            margin: {
+                top: '10mm',
+                bottom: '10mm',
+                left: '10mm',
+                right: '10mm',
+            },
             printBackground: true
         })
 

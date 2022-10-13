@@ -120,10 +120,10 @@
         "complianceId": "AWS_RBI_MD_ITF",
         "title": "AWS RBI MD-ITF",
         "description": "Reserve Bank of India Master Direction - Information Technology Framework",
-        "requirements": 24,
-        "mappedPlugins": 0,
-        "pass": 0,
-        "fail": 0,
+        "requirements": 28,
+        "mappedPlugins": 162,
+        "pass": 4195,
+        "fail": 623,
         "controls": {
             "3": {
                 "id": "3",
@@ -137,10 +137,27 @@
                                 "id": "a",
                                 "title": "Identification and Classification of Information Assets",
                                 "description": "NBFCs shall maintain detailed inventory of Information Asset with distinct and clear identification of the asset.",
-                                "plugins": [],
-                                "pluginCount": 0,
-                                "pass": 0,
-                                "fail": 0
+                                "plugins": [
+                                    {
+                                        "title": "Unused Elastic Block Store Volumes",
+                                        "pluginId": "34d31b83-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 10,
+                                        "fail": 3
+                                    },
+                                    {
+                                        "title": "ECR Repository Tag Immutability",
+                                        "pluginId": "367b2aa7-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 2
+                                    }
+                                ],
+                                "pluginCount": 2,
+                                "pass": 10,
+                                "fail": 5
                             },
                             "b": {
                                 "id": "b",
@@ -155,10 +172,195 @@
                                 "id": "c",
                                 "title": "Role based Access Control",
                                 "description": "Access to information should be based on well-defined user roles (system administrator, user manager, application owner etc.), NBFCs shall avoid dependence on one or few persons for a particular job. There should be clear delegation of authority for right to upgrade/change user profiles and permissions and also key business parameters (eg. interest rates) which should be documented.",
-                                "plugins": [],
-                                "pluginCount": 0,
-                                "pass": 0,
-                                "fail": 0
+                                "plugins": [
+                                    {
+                                        "title": "Access Keys Not Rotated",
+                                        "pluginId": "379634af-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 31,
+                                        "fail": 5
+                                    },
+                                    {
+                                        "title": "Groups Without Users",
+                                        "pluginId": "37a8ad7e-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Role With Inline Policies",
+                                        "pluginId": "1cef0f4b-811c-11ec-8f9f-42010aa00004",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 76,
+                                        "fail": 8
+                                    },
+                                    {
+                                        "title": "User With Inline Policies",
+                                        "pluginId": "1cef10d7-811c-11ec-8f9f-42010aa00004",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 29,
+                                        "fail": 3
+                                    },
+                                    {
+                                        "title": "Group With Inline Policies",
+                                        "pluginId": "37aec9b1-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Password Policy Not Set",
+                                        "pluginId": "37f208e7-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 4
+                                    },
+                                    {
+                                        "title": "Password Policy Missing 'Require Lowercase'",
+                                        "pluginId": "37f822a1-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Password Policy Missing 'Require Uppercase'",
+                                        "pluginId": "380a539e-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Password Policy Missing 'Require Numbers'",
+                                        "pluginId": "37fe303f-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Password Policy Missing 'Require Symbols'",
+                                        "pluginId": "380445dd-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "No Policy to Allow Users To Change Password",
+                                        "pluginId": "726b32cb-2911-11ed-b4d3-42010aa00018",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Insecure Password Reuse Prevention",
+                                        "pluginId": "38109d72-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Insecure Password Expiration",
+                                        "pluginId": "37ebc485-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Weak Password Policy 'Minimum Password Length'",
+                                        "pluginId": "37e00c19-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Insecure Role Policies",
+                                        "pluginId": "37c7d978-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 59,
+                                        "fail": 25
+                                    },
+                                    {
+                                        "title": "Root Access Keys Exist",
+                                        "pluginId": "3816a6f8-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 4,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Users MFA Disabled",
+                                        "pluginId": "384221a0-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 31
+                                    },
+                                    {
+                                        "title": "Root MFA Disabled",
+                                        "pluginId": "3829509a-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 0,
+                                        "fail": 4
+                                    },
+                                    {
+                                        "title": "Directly Attached User IAM Policies",
+                                        "pluginId": "37e61315-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 9,
+                                        "fail": 23
+                                    },
+                                    {
+                                        "title": "Inactive Users",
+                                        "pluginId": "384e5ba1-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 19,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "Unused Access Keys",
+                                        "pluginId": "379030b5-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 36,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Missing Hardware MFA For Root Account",
+                                        "pluginId": "38233968-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 4
+                                    },
+                                    {
+                                        "title": "Instances Without IAM Role",
+                                        "pluginId": "34f7b296-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 10
+                                    }
+                                ],
+                                "pluginCount": 23,
+                                "pass": 263,
+                                "fail": 118
                             },
                             "d": {
                                 "id": "d",
@@ -191,50 +393,295 @@
                                 "id": "g",
                                 "title": "Incident Management",
                                 "description": "The IS Policy should define what constitutes an incident. NBFCs shall develop and implement processes for preventing, detecting, analysing and responding to information security incidents.",
-                                "plugins": [],
-                                "pluginCount": 0,
+                                "plugins": [
+                                    {
+                                        "title": "ELB WAF Disabled",
+                                        "pluginId": "370214d3-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 1
+                                    }
+                                ],
+                                "pluginCount": 1,
                                 "pass": 0,
-                                "fail": 0
+                                "fail": 1
                             },
                             "h": {
                                 "id": "h",
                                 "title": "Trails",
                                 "description": "NBFCs shall ensure that audit trails exist for IT assets satisfying its business requirements including regulatory and legal requirements, facilitating audit, serving as forensic evidence when required and assisting in dispute resolution. If an employee, for instance, attempts to access an unauthorized section, this improper activity should be recorded in the audit trail.",
-                                "plugins": [],
-                                "pluginCount": 0,
-                                "pass": 0,
-                                "fail": 0
+                                "plugins": [
+                                    {
+                                        "title": "CloudWatch Logs Missing For API Gateway",
+                                        "pluginId": "32d10e52-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 2
+                                    },
+                                    {
+                                        "title": "CloudTrail CloudWatch Integration Disabled",
+                                        "pluginId": "33acedc4-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "ElasticSearch Logging Disabled",
+                                        "pluginId": "3746d537-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 2
+                                    },
+                                    {
+                                        "title": "Redshift Cluster Audit Logging Disabled",
+                                        "pluginId": "394964e3-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "CloudTrail Logging Disabled",
+                                        "pluginId": "33bf9b5d-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 0,
+                                        "fail": 51
+                                    },
+                                    {
+                                        "title": "CloudTrail Data Events Disabled",
+                                        "pluginId": "33b339b2-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Low CloudWatch Log Retention Period",
+                                        "pluginId": "33f84dc0-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 3,
+                                        "fail": 3
+                                    },
+                                    {
+                                        "title": "ELB Logging Disabled",
+                                        "pluginId": "36d73656-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "RDS Logging Disabled",
+                                        "pluginId": "390b5605-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 4
+                                    },
+                                    {
+                                        "title": "S3 Bucket Logging Disabled",
+                                        "pluginId": "3a1114ac-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 22
+                                    },
+                                    {
+                                        "title": "VPC Flow Logs Not Enabled",
+                                        "pluginId": "34f18c5e-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 2,
+                                        "fail": 73
+                                    },
+                                    {
+                                        "title": "Redshift Encryption Disabled",
+                                        "pluginId": "396f27db-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Redshift Undesired Node Type",
+                                        "pluginId": "3987b9ac-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 0,
+                                        "fail": 0
+                                    }
+                                ],
+                                "pluginCount": 13,
+                                "pass": 7,
+                                "fail": 160
                             },
                             "i": {
                                 "id": "i",
                                 "title": "Public Key Infrastructure (PKI)",
                                 "description": "NBFCs may increase the usage of PKI to ensure confidentiality of data, access control, data integrity, authentication and nonrepudiation.",
-                                "plugins": [],
-                                "pluginCount": 0,
-                                "pass": 0,
-                                "fail": 0
+                                "plugins": [
+                                    {
+                                        "title": "Upcoming ACM Certificates Expiry That Are Attached To AWS Resources",
+                                        "pluginId": "66f28e29-9bb1-11ec-b0f8-42010aa00004",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "Upcoming ACM Certificates Expiry That Are Dangling",
+                                        "pluginId": "328d8106-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "ACM Expired Certificates For Attached AWS Resources",
+                                        "pluginId": "66ffe23e-9bb1-11ec-b0f8-42010aa00004",
+                                        "provider": "AWS",
+                                        "severity": "HIGH",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "ACM Expired Certificates That Are Dangling",
+                                        "pluginId": "3293ce42-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 1,
+                                        "fail": 0
+                                    },
+                                    {
+                                        "title": "ELB Non HTTPS Listeners",
+                                        "pluginId": "36d0f128-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "Missing API Gateway Client Certificate",
+                                        "pluginId": "32cad4c9-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 2
+                                    },
+                                    {
+                                        "title": "ElasticSearch HTTPS Only Disabled",
+                                        "pluginId": "37405dbb-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 2
+                                    },
+                                    {
+                                        "title": "ELB Without SSL Termination",
+                                        "pluginId": "36fbde7f-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "Redshift Parameter Group SSL Required",
+                                        "pluginId": "39819694-2d1f-11ec-b0b4-42010aa00042",
+                                        "provider": "AWS",
+                                        "severity": "LOW",
+                                        "pass": 0,
+                                        "fail": 1
+                                    },
+                                    {
+                                        "title": "S3 Bucket Allowing Http Request",
+                                        "pluginId": "728ed00d-2911-11ed-b4d3-42010aa00018",
+                                        "provider": "AWS",
+                                        "severity": "MEDIUM",
+                                        "pass": 1,
+                                        "fail": 21
+                                    }
+                                ],
+                                "pluginCount": 10,
+                                "pass": 5,
+                                "fail": 28
                             }
                         },
-                        "pass": 0,
-                        "fail": 0,
-                        "pluginCount": 0
+                        "pass": 285,
+                        "fail": 312,
+                        "pluginCount": 49
                     },
                     "3.3": {
                         "id": "3.3",
                         "title": "Vulnerability Management",
                         "description": "A vulnerability can be defined as an inherent configuration flaw in an organization’s information technology base, whether hardware or software, which can be exploited by a third party to gather sensitive information regarding the organization. Vulnerability management is an ongoing process to determine the process of eliminating or mitigating vulnerabilities based upon the risk and cost associated with the vulnerabilities. NBFCs may devise a strategy for managing and eliminating vulnerabilities and such strategy may clearly be communicated in the Cyber Security policy.",
-                        "plugins": [],
-                        "pluginCount": 0,
-                        "pass": 0,
-                        "fail": 0
+                        "plugins": [
+                            {
+                                "title": "AWS ElasticBeanstalk Managed Platform Updates Not Configured",
+                                "pluginId": "36b8955e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "RDS DocumentDB Minor Version Upgrade Disabled",
+                                "pluginId": "3917b338-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 4,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Redshift Cluster Version Upgrade Disabled",
+                                "pluginId": "399418c5-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "Redshift Automated Snapshot Retention Period Not Set",
+                                "pluginId": "399a1c0b-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "SSM Agent Not Installed",
+                                "pluginId": "3a9a6c84-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 10,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 5,
+                        "pass": 14,
+                        "fail": 2
                     },
                     "3.5": {
                         "id": "3.5",
                         "title": "Cyber Crisis Management Plan",
                         "description": "A Cyber Crisis Management Plan (CCMP) should be immediately evolved and should be a part of the overall Board approved strategy. CCMP should address the following four aspects: (i) Detection (ii) Response (iii) Recovery and (iv) Containment. NBFCs need to take effective measures to prevent cyber-attacks and to promptly detect any cyber-intrusions so as to respond / recover / contain the fall out. NBFCs are expected to be well prepared to face emerging cyber-threats such as ‘zero-day’ attacks, remote access threats, and targeted attacks. Among other things, NBFCs should take necessary preventive and corrective measures in addressing various types of cyber threats including, but not limited to, denial of service, distributed denial of services (DDoS), ransom-ware / crypto ware, destructive malware, business email frauds including spam, email phishing, spear phishing, whaling, vishing frauds, drive-by downloads, browser gateway fraud, ghost administrator exploits, identity frauds, memory update frauds, password related frauds, etc.",
-                        "plugins": [],
-                        "pluginCount": 0,
-                        "pass": 0,
+                        "plugins": [
+                            {
+                                "title": "SSM Agent Not Installed",
+                                "pluginId": "3a9a6c84-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 10,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 1,
+                        "pass": 10,
                         "fail": 0
                     },
                     "3.9": {
@@ -256,9 +703,9 @@
                         "fail": 0
                     }
                 },
-                "pass": 0,
-                "fail": 0,
-                "pluginCount": 0
+                "pass": 309,
+                "fail": 314,
+                "pluginCount": 55
             },
             "6": {
                 "id": "6",
@@ -266,11 +713,44 @@
                 "controls": {
                     "6.3": {
                         "id": "6.3",
-                        "plugins": [],
                         "title": "NBFCs shall consider the need to put in place necessary backup sites for their critical business systems and Data centers.",
-                        "pluginCount": 0,
-                        "pass": 0,
-                        "fail": 0
+                        "plugins": [
+                            {
+                                "title": "KMS Key Rotation Disabled",
+                                "pluginId": "387f9ec0-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "RDS Automated Backups Disabled",
+                                "pluginId": "38e5eef6-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 3,
+                                "fail": 1
+                            },
+                            {
+                                "title": "RDS Automated Backups Low Retention",
+                                "pluginId": "38ec594f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 2,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Redshift Automated Snapshot Retention Period Not Set",
+                                "pluginId": "399a1c0b-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 1
+                            }
+                        ],
+                        "pluginCount": 4,
+                        "pass": 5,
+                        "fail": 4
                     },
                     "6.4": {
                         "id": "6.4",
@@ -281,37 +761,801 @@
                         "fail": 0
                     }
                 },
-                "pass": 0,
-                "fail": 0,
-                "pluginCount": 0
+                "pass": 5,
+                "fail": 4,
+                "pluginCount": 4
             },
             "8": {
                 "id": "8",
                 "title": "It is recommended that smaller NBFCs may start with developing basic IT systems mainly for maintaining the database.",
                 "controls": {
+                    "1": {
+                        "id": "1",
+                        "title": "IT Systems should be progressively scaled up as the size and complexity of NBFC’s operations increases.",
+                        "plugins": [
+                            {
+                                "title": "ELB Cross-Zone Load Balancing Disabled",
+                                "pluginId": "36cafb4f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "ELB Deletion Protection Not Configured",
+                                "pluginId": "36e324c6-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "RDS Deletion Protection Disabled",
+                                "pluginId": "38f2c4f3-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "RDS Multiple AZ Disabled",
+                                "pluginId": "391d94c8-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 2,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Down VPN Tunnels",
+                                "pluginId": "36688427-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "ELB Health Check Inactive",
+                                "pluginId": "332c3187-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 1,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 6,
+                        "pass": 3,
+                        "fail": 8
+                    },
                     "i": {
-                        "id": "i",
+                        "id": "ii",
                         "title": "Basic security aspects such as physical/ logical access controls and well defined password policy;",
-                        "plugins": [],
-                        "pluginCount": 0,
-                        "pass": 0,
-                        "fail": 0
+                        "plugins": [
+                            {
+                                "title": "S3 Bucket All Users Policy",
+                                "pluginId": "3a04aaa4-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 3,
+                                "fail": 0
+                            },
+                            {
+                                "title": "DMS Public Replication Instance",
+                                "pluginId": "3462958f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Insecure Amazon Elastic Block Store Snapshots Permissions",
+                                "pluginId": "34c6dd65-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Public EC2 Instances",
+                                "pluginId": "35f30323-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 3,
+                                "fail": 7
+                            },
+                            {
+                                "title": "ElasticSearch Domains Without VPC",
+                                "pluginId": "3759cd5a-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 2,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Lambda Public Access",
+                                "pluginId": "38b05cd4-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 3,
+                                "fail": 3
+                            },
+                            {
+                                "title": "Lambda Without VPC",
+                                "pluginId": "38bc868c-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 9,
+                                "fail": 0
+                            },
+                            {
+                                "title": "RDS Publicly Accessible",
+                                "pluginId": "39304ab5-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 3,
+                                "fail": 1
+                            },
+                            {
+                                "title": "RDS Snapshot Publicly Accessible",
+                                "pluginId": "728367ed-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 12,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Redshift Publicly Accessible",
+                                "pluginId": "397bac88-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 1,
+                                "fail": 0
+                            },
+                            {
+                                "title": "All Ports Open to Public",
+                                "pluginId": "354ad84b-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Cassandra",
+                                "pluginId": "f83364c2-aa7c-11ec-8a73-42010aa00005",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open CIFS",
+                                "pluginId": "3550f1a3-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 118,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Open DNS",
+                                "pluginId": "35574aa7-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Docker",
+                                "pluginId": "355d2f7d-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Elasticsearch",
+                                "pluginId": "35635c58-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open FTP",
+                                "pluginId": "3569a44e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Hadoop HDFS NameNode Metadata Service",
+                                "pluginId": "356ff4c7-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Open Hadoop HDFS NameNode WebUI",
+                                "pluginId": "35761700-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Kibana",
+                                "pluginId": "357c4e8f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Mongo",
+                                "pluginId": "f840a2fd-aa7c-11ec-8a73-42010aa00005",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open MsSQL",
+                                "pluginId": "f84d63d4-aa7c-11ec-8a73-42010aa00005",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open MySQL",
+                                "pluginId": "35824086-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open NetBIOS",
+                                "pluginId": "35889c5c-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Oracle",
+                                "pluginId": "358ee132-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Oracle Auto Data Warehouse",
+                                "pluginId": "35953dc6-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open PostgreSQL",
+                                "pluginId": "359b664e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open RDP",
+                                "pluginId": "35a17ea7-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Redis",
+                                "pluginId": "f85a15b3-aa7c-11ec-8a73-42010aa00005",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Restricted Ports Open to Public",
+                                "pluginId": "35ae12f4-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 114,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Open RPC",
+                                "pluginId": "35a7b75a-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open Salt",
+                                "pluginId": "35cd1dcb-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open SMBoTCP",
+                                "pluginId": "35b42c02-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open SMTP",
+                                "pluginId": "35ba3377-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open SQL Server",
+                                "pluginId": "35c05b74-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open SSH",
+                                "pluginId": "35c6b004-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 114,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Open Telnet",
+                                "pluginId": "35d3bf72-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open VNC Client",
+                                "pluginId": "35da19ac-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Open VNC Server",
+                                "pluginId": "35e0bd65-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 116,
+                                "fail": 2
+                            },
+                            {
+                                "title": "S3 Bucket Insecure Read Access",
+                                "pluginId": "39eb8831-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 11,
+                                "fail": 1
+                            },
+                            {
+                                "title": "S3 Bucket Insecure Write Access",
+                                "pluginId": "39f1f83a-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 8,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Notebook Instance Not Placed In VPC",
+                                "pluginId": "72a6fe06-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Notebook Instance publicly Accessible",
+                                "pluginId": "3a3029ba-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "CRITICAL",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Default Security Groups In Use",
+                                "pluginId": "34886fb0-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 74,
+                                "fail": 1
+                            },
+                            {
+                                "title": "Access Keys Not Rotated",
+                                "pluginId": "379634af-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 31,
+                                "fail": 5
+                            },
+                            {
+                                "title": "Groups Without Users",
+                                "pluginId": "37a8ad7e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Group With Inline Policies",
+                                "pluginId": "37aec9b1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Role With Inline Policies",
+                                "pluginId": "1cef0f4b-811c-11ec-8f9f-42010aa00004",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 76,
+                                "fail": 8
+                            },
+                            {
+                                "title": "User With Inline Policies",
+                                "pluginId": "1cef10d7-811c-11ec-8f9f-42010aa00004",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 29,
+                                "fail": 3
+                            },
+                            {
+                                "title": "Insecure Password Reuse Prevention",
+                                "pluginId": "38109d72-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "No Policy to Allow Users To Change Password",
+                                "pluginId": "726b32cb-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Uppercase'",
+                                "pluginId": "380a539e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Symbols'",
+                                "pluginId": "380445dd-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Numbers'",
+                                "pluginId": "37fe303f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Lowercase'",
+                                "pluginId": "37f822a1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Not Set",
+                                "pluginId": "37f208e7-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Insecure Password Expiration",
+                                "pluginId": "37ebc485-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Weak Password Policy 'Minimum Password Length'",
+                                "pluginId": "37e00c19-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Instances Without IAM Role",
+                                "pluginId": "34f7b296-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 10
+                            },
+                            {
+                                "title": "Root Access Keys Exist",
+                                "pluginId": "3816a6f8-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 4,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Insecure Role Policies",
+                                "pluginId": "37c7d978-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 59,
+                                "fail": 25
+                            },
+                            {
+                                "title": "Users MFA Disabled",
+                                "pluginId": "384221a0-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 31
+                            },
+                            {
+                                "title": "No IAM Role with Support Policy",
+                                "pluginId": "725fc076-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 1,
+                                "fail": 3
+                            },
+                            {
+                                "title": "Directly Attached User IAM Policies",
+                                "pluginId": "37e61315-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 9,
+                                "fail": 23
+                            },
+                            {
+                                "title": "Unused Access Keys",
+                                "pluginId": "379030b5-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 36,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Inactive Users",
+                                "pluginId": "384e5ba1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 19,
+                                "fail": 1
+                            },
+                            {
+                                "title": "Missing Hardware MFA For Root Account",
+                                "pluginId": "38233968-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Root MFA Disabled",
+                                "pluginId": "3829509a-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "ElasticSearch Global Access",
+                                "pluginId": "373a0482-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 2,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 69,
+                        "pass": 3641,
+                        "fail": 196
                     },
                     "ii": {
                         "id": "ii",
                         "title": "A well-defined user role;",
-                        "plugins": [],
-                        "pluginCount": 0,
-                        "pass": 0,
-                        "fail": 0
+                        "plugins": [
+                            {
+                                "title": "Groups Without Users",
+                                "pluginId": "37a8ad7e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "User With Inline Policies",
+                                "pluginId": "1cef10d7-811c-11ec-8f9f-42010aa00004",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 29,
+                                "fail": 3
+                            },
+                            {
+                                "title": "Role With Inline Policies",
+                                "pluginId": "1cef0f4b-811c-11ec-8f9f-42010aa00004",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 76,
+                                "fail": 8
+                            },
+                            {
+                                "title": "Group With Inline Policies",
+                                "pluginId": "37aec9b1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Insecure Password Reuse Prevention",
+                                "pluginId": "38109d72-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "No Policy to Allow Users To Change Password",
+                                "pluginId": "726b32cb-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Uppercase'",
+                                "pluginId": "380a539e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Symbols'",
+                                "pluginId": "380445dd-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Numbers'",
+                                "pluginId": "37fe303f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Missing 'Require Lowercase'",
+                                "pluginId": "37f822a1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Password Policy Not Set",
+                                "pluginId": "37f208e7-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "Insecure Password Expiration",
+                                "pluginId": "37ebc485-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Weak Password Policy 'Minimum Password Length'",
+                                "pluginId": "37e00c19-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "Insecure Role Policies",
+                                "pluginId": "37c7d978-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 59,
+                                "fail": 25
+                            },
+                            {
+                                "title": "No IAM Role with Support Policy",
+                                "pluginId": "725fc076-2911-11ed-b4d3-42010aa00018",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 1,
+                                "fail": 3
+                            },
+                            {
+                                "title": "Directly Attached User IAM Policies",
+                                "pluginId": "37e61315-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 9,
+                                "fail": 23
+                            },
+                            {
+                                "title": "Inactive Users",
+                                "pluginId": "384e5ba1-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 19,
+                                "fail": 1
+                            },
+                            {
+                                "title": "Unused Access Keys",
+                                "pluginId": "379030b5-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 36,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 18,
+                        "pass": 229,
+                        "fail": 67
                     },
                     "iii": {
                         "id": "iii",
                         "title": "A Maker-checker concept to reduce the risk of error and misuse and to ensure reliability of data/information;",
-                        "plugins": [],
-                        "pluginCount": 0,
+                        "plugins": [
+                            {
+                                "title": "S3 Bucket Versioning Disabled",
+                                "pluginId": "3a1d998e-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 22
+                            }
+                        ],
+                        "pluginCount": 1,
                         "pass": 0,
-                        "fail": 0
+                        "fail": 22
                     },
                     "iv": {
                         "id": "iv",
@@ -355,16 +1599,123 @@
                     },
                     "ix": {
                         "id": "ix",
-                        "plugins": [],
                         "title": "Arrangement for backup of data with periodic testing.",
+                        "plugins": [
+                            {
+                                "title": "RDS Automated Backups Low Retention",
+                                "pluginId": "38ec594f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 2,
+                                "fail": 2
+                            },
+                            {
+                                "title": "RDS Automated Backups Disabled",
+                                "pluginId": "38e5eef6-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 3,
+                                "fail": 1
+                            },
+                            {
+                                "title": "Redshift Automated Snapshot Retention Period Not Set",
+                                "pluginId": "399a1c0b-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 1
+                            }
+                        ],
+                        "pluginCount": 3,
+                        "pass": 5,
+                        "fail": 4
+                    }
+                },
+                "pass": 3878,
+                "fail": 297,
+                "pluginCount": 97
+            },
+            "4.4": {
+                "id": "4.4",
+                "title": "NBFCs may put in place MIS that assist the Top Management as well as the business heads in decision making and also to maintain an oversight over operations of various business verticals. With robust IT systems in place, NBFCs may have the following as part of an effective system generated MIS (indicative list).",
+                "controls": {
+                    "g": {
+                        "id": "g",
+                        "title": "Fraud analysis- Suspicious transaction analysis, embezzlement, theft or suspected money-laundering, misappropriation of assets, manipulation of financial records etc. The regulatory requirement of reporting fraud to RBI should be system driven.",
+                        "plugins": [],
+                        "pluginCount": 0,
+                        "pass": 0,
+                        "fail": 0
+                    },
+                    "h": {
+                        "id": "h",
+                        "title": "Capacity and performance analysis of IT security systems.",
+                        "plugins": [
+                            {
+                                "title": "ELB Cross-Zone Load Balancing Disabled",
+                                "pluginId": "36cafb4f-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "ELB Deletion Protection Not Configured",
+                                "pluginId": "36e324c6-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "MEDIUM",
+                                "pass": 0,
+                                "fail": 1
+                            },
+                            {
+                                "title": "RDS Deletion Protection Disabled",
+                                "pluginId": "38f2c4f3-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "HIGH",
+                                "pass": 0,
+                                "fail": 4
+                            },
+                            {
+                                "title": "RDS Multiple AZ Disabled",
+                                "pluginId": "391d94c8-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 2,
+                                "fail": 2
+                            },
+                            {
+                                "title": "Down VPN Tunnels",
+                                "pluginId": "36688427-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 0,
+                                "fail": 0
+                            },
+                            {
+                                "title": "ELB Health Check Inactive",
+                                "pluginId": "332c3187-2d1f-11ec-b0b4-42010aa00042",
+                                "provider": "AWS",
+                                "severity": "LOW",
+                                "pass": 1,
+                                "fail": 0
+                            }
+                        ],
+                        "pluginCount": 6,
+                        "pass": 3,
+                        "fail": 8
+                    },
+                    "i": {
+                        "id": "i",
+                        "title": "Incident reporting, their impact and steps taken for non -recurrence of such events in the future.",
+                        "plugins": [],
                         "pluginCount": 0,
                         "pass": 0,
                         "fail": 0
                     }
                 },
-                "pass": 0,
-                "fail": 0,
-                "pluginCount": 0
+                "pass": 3,
+                "fail": 8,
+                "pluginCount": 6
             }
         }
     }

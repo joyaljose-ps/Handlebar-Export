@@ -1,0 +1,61 @@
+{{#each this}}
+<tr style="page-break-inside: avoid;">
+    <td class="font-medium text-xs p-4">
+        <div class="flex items-center ml-4">
+            {{#if plugins.length}}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_902_928" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
+                    height="16">
+                    <rect width="16" height="16" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_902_928)">
+                    <path
+                        d="M7.53285 9.53341L5.79952 7.80008C5.58841 7.58897 5.5413 7.34741 5.65819 7.07541C5.77463 6.80297 5.98285 6.66675 6.28285 6.66675H9.71619C10.0162 6.66675 10.2244 6.80297 10.3409 7.07541C10.4577 7.34741 10.4106 7.58897 10.1995 7.80008L8.46619 9.53341C8.39952 9.60008 8.3273 9.65008 8.24952 9.68341C8.17174 9.71675 8.08841 9.73341 7.99952 9.73341C7.91063 9.73341 7.8273 9.71675 7.74952 9.68341C7.67174 9.65008 7.59952 9.60008 7.53285 9.53341Z"
+                        fill="#1C1B1F" />
+                </g>
+            </svg>
+            {{/if}}
+            <div class="flex items-start">
+                <p class="text-xs font-medium ml-1">{{id}}. </p>
+                <p class="text-xs font-medium ml-1">{{title}}</p>
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="flex items-center">
+            <div class="h-1 relative w-9/12 rounded-full overflow-hidden flex items-center">
+                <div class="w-full h-full absolute" style="background-color:#F4F4F4"></div>
+                <div class="h-full absolute"
+                    style="background-color:{{progressColor (percentage pass (sum pass fail))}}; width:{{percentage pass (sum pass fail)}}%">
+                </div>
+            </div>
+            <span class="text-xs font-medium ml-3" style="color:#000000">{{percentage pass (sum
+                pass
+                fail)}}%</span>
+        </div>
+    </td>
+    <td class="font-medium text-xs p-4">
+        {{#if controls}}
+        <p class="text-center" style="color:#000000">
+            {{passedChecks controls}} of {{objectLength controls}}
+        </p>
+        {{else}}
+        <div class="flex justify-center">
+            <div class="rounded px-3 py-1 text-center {{passedCheckClass this}}" style="width:fit-content">
+                {{passedCheckText this}}
+            </div>
+        </div>
+        {{/if}}
+    </td>
+</tr>
+<tr>
+    <td colSpan="3">
+        <div class="ml-8 mr-4" style="border-bottom: 1px solid #F4F4F4;"></div>
+    </td>
+</tr>
+{{#if controls}}
+{{> recursiveControls controls}}
+{{else}}
+{{> recursivePlugins plugins}}
+{{/if}}
+{{/each}}
